@@ -15,7 +15,6 @@ function handleButtonClick(buttonNumber) {
   selectedButton.classList.add("highlight");
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
   // Elements
   var links = document.querySelectorAll('.page-selector a');
@@ -60,10 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
       loadPage(href);
     });
   }
-
-
-
-
 
   // Set the initial playback rate of the video to 1x
   backgroundvideo.playbackRate = 1;
@@ -159,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resultContainer.scrollIntoView({ behavior: 'smooth' });
     
     $.ajax({
-      url: 'http://44.198.240.54:8000/pass_to_backend',
+      url: 'https://analisis-medical.com:8000/backend/pass_to_backend',
       type: 'POST',
       data: JSON.stringify({ image: imageData, text: notes, sliderValue: painLevelValue, bodyPart: BodyPart}),
       contentType: 'application/json',
